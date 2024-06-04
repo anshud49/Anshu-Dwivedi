@@ -67,7 +67,7 @@ function Home() {
   useEffect(() => {
     const timerId = setTimeout(() => {
       fetchBooks();
-    }, 100);
+    }, 200);
 
     return () => clearTimeout(timerId);
   }, [query, fetchBooks]);
