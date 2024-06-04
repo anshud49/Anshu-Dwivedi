@@ -1,0 +1,32 @@
+.Bookshelf {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .content   {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .size
+  {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+ 

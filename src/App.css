@@ -1,38 +1,180 @@
 .App {
-  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.search-container span {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.search-container input {
+  padding: 5px;
+  font-size: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.67);
+  border-radius: 7px;
+  width: 100%;
+  max-width: 250px;
+}
+.search-container input:focus {
+  outline: none;
+  border-color: black;
+}
+
+.bookshelf-button button {
+  padding: 10px 20px;
+  background-color: #28a745;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.adjust {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-left: 90px;
+  gap: 20px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.nav-item .link {
+  text-decoration: none;
+}
+
+.bookshelf-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bookshelf-container li {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+  .search-container {
+    flex-direction: row;
+    margin: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search-container span {
+    margin-bottom: 0;
+    margin-right: 10px;
   }
+
+  .cards-container {
+    justify-content: center;
+    padding-left: 0;
+    gap: 10px;
+  }
+
+  .search-container input {
+    font-size: 16px;
+    max-width: 100px;
+  }
+
+  .bookshelf-button button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-container span {
+    font-size: 16px;
+  }
+
+  .search-container input {
+    font-size: 16px;
+  }
+
+  .bookshelf-button button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .search-container
+  {
+    display: none;
+  }
+  .adjust input:focus {
+    outline: none;
+    border-color: black;
+  }
+  .bookshelf-button
+  {
+    position: absolute;
+    right: 10px;
+    top:5px;
+  }
+  .adjust {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .adjust span {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .adjust input {
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.67);
+    border-radius: 7px;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 420px)
+{
+  .bookshelf-button
+  {
+    position: inherit;
+    margin: 0 auto;
+  }
+ 
 }
