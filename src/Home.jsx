@@ -84,7 +84,7 @@ function Home() {
           />
         </div>
 
-        <Link to="/mybookshelf" className="nav-item bookshelf-button">
+        <Link style={{ textDecoration: 'none' }} to="/mybookshelf" className="nav-item bookshelf-button">
           <button>My Bookshelf</button>
         </Link>
       </nav>

@@ -10,8 +10,8 @@ function Bookshelf() {
     return (
         <div className="Bookshelf">
             <nav className="navbar">
-                <Link to='/' className="nav-item">
-                    <IoMdArrowRoundBack className='size' />
+                <Link style={{ textDecoration: 'none' }} to='/' className="nav-item">
+                    <IoMdArrowRoundBack className='size arrow' />
                 </Link>
                 <div className="nav-item content">
                     <span className='size'>My Bookshelf</span>
